@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  <title>Event Parsing Demo</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+
+<!-- New Event HTML -->
+<div class="newEvent">
+  <input id="parsedField" type="text" placeholder="Meet John tomorrow at noon"/>
+  <input id="parsedTitle" type="text" placeholder="Event Name"/>
+  <input id="parsedLocation" type="text" placeholder="Location"/>
+  <input id="parsedStart" type="text" placeholder="Time"/>
+</div>
+
+<!-- Scripts -->
+<script src="jquery.js"></script>
+<script src="underscore.js"></script>
+<script src="../date.js"></script>
+<script src="../eventParse.js"></script>
+
+<!-- Hook up parse inputs / outputs. -->
+<script>
+  $(function() {
+    var $parsedInput = $('#parsedField'),
+        $parsedTitle = $('#parsedTitle'),
+        $parsedLocation = $('#parsedLocation'),
+        $parsedStart = $('#parsedStart');
+
+    var parseAndUpdate = _.debounce(function(){
+      console.log($parsedInput.val())
+      var parsed = Event.parse($parsedInput.val());
+      $parsedTitle.val(parsed.title);
+      $parsedLocation.val(parsed.location);
+      $parsedStart.val(parsed.startTime.toString("dddd, MMMM dd, yyyy h:mm:ss tt"));
+    }, 100);
+
+    $parsedInput.keypress(parseAndUpdate);
+  });
+</script>
+
+</body>
+</html>

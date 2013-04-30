@@ -1,0 +1,40 @@
+/* app.css */
+
+body{
+  background-color: #DDD;
+}
+
+.newEvent{
+  border-radius: 5px;
+  border: 1px solid #CCC;
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  margin: 200px auto;
+
+  border: 1px solid #4688FE;
+  overflow: hidden;
+}
+
+input[type="text"]{
+  display: block;
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: none;
+  border-bottom: 1px solid #DDD;
+  font-size: 14px;
+  padding: 10px 20px;
+
+  color: #64728B;
+}
+input[type="text"]:focus{
+  color: #0F59DC;
+}
+
+#parsedField{
+  background-color: #E2EAFF;
+  border-bottom: 1px solid #4688FE;
+  padding: 20px;
+  font-weight: bold;
+}
