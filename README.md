@@ -10,7 +10,7 @@ Calling `Event.parse(YOUR_STRING)` will return an object with the following prop
 - location (string)
 - startTime (date object)
 
-### Example
+### Exampleg
 ```javascript
 Event.parse("Pick up milk at Giant Eagle on Friday afternoon");
 /*
@@ -21,4 +21,4 @@ Returns
   startTime: Fri May 03 2013 16:00:00 GMT-0400 (EDT)
 }
 */
-``
+```
