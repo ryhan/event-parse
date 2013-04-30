@@ -36,5 +36,7 @@ input[type="text"]:focus{
   background-color: #E2EAFF;
   border-bottom: 1px solid #4688FE;
   padding: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   font-weight: bold;
 }
